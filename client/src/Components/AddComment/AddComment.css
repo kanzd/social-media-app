@@ -1,0 +1,19 @@
+.AddComment{
+    width: 100%;
+}
+.CommentSection{
+    position: relative;
+    padding: 1%;
+}
+.Input{
+    width: 78%;
+    height: 2rem;
+    border: none;
+    padding-left: 0.7rem;
+}
+.Submit{
+    position: absolute;
+    top: 10%;
+    right: 0;
+    height: 84%;
+}
