@@ -4,6 +4,7 @@ import Auth from './Pages/auth/Auth';
 import Home from './Pages/home/Home';
 import Profile from './Pages/profile/Profile';
 import { Routes, Route, Navigate } from 'react-router-dom';
+import SettingsPage from './Pages/settings/SettingsPage';
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
       <Routes>
         <Route path='/' element={user ? <Navigate to='home' /> : <Navigate to='auth' />} />
         <Route path='/home' element={user ? <Home /> : <Navigate to='../auth' />} />
+        <Route path='/settings' element={user ? <SettingsPage /> : <Navigate to='../auth' />} />
         <Route path='/auth' element={user ? <Navigate to='../home' /> : <Auth />} />
         <Route path='/profile/:id' element={user ? <Profile /> : <Navigate to='../auth' />} />
       </Routes>
